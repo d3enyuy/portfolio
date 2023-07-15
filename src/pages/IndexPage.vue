@@ -25,7 +25,7 @@
   filter: blur(200px);
 
   animation: left-to-right 20s ease-in forwards infinite;
-  transition: gradient rotate(380deg);
+  transition: gradient rotate(360deg);
 }
 
 .caption {
