@@ -59,14 +59,15 @@ const meta = ref<Meta>({
 });
 </script>
 
-<style>
+<style lang="scss">
 .container {
   background: black;
   z-index: -1;
+  height: calc(100vh - #{$header-container-height});
 }
 .test {
   z-index: 1;
-  height: 50vh;
+  height: 100%;
   background: url(../assets/f.svg);
 
   filter: blur(200px);
