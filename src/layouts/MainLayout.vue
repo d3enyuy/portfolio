@@ -34,7 +34,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" bordered>
+    <q-drawer mini overlay bordered v-model="leftDrawerOpen" class="drawer">
       <q-list>
         <q-item-label header> Essential Links </q-item-label>
 
@@ -88,6 +88,8 @@ function toggleLeftDrawer() {
 .page-container {
   overflow: hidden;
 }
+.drawer {
+}
 .headings {
   width: 70vw;
 }
@@ -102,5 +104,49 @@ function toggleLeftDrawer() {
     #00afbe 64.06%,
     #6efacd 100%
   );
+
+  animation: colorchange 4s ease-out infinite;
+}
+
+@keyframes colorchange {
+  0% {
+    border-radius: 10px;
+    background: linear-gradient(
+      199deg,
+      #0b1f46 0%,
+      #00638f 32.29%,
+      #00afbe 64.06%,
+      #6efacd 100%
+    );
+  }
+  33% {
+    border-radius: 10px;
+    background: linear-gradient(
+      356deg,
+      #6efacd 0%,
+      #00afbe 45.77%,
+      #00638f 65.1%,
+      #0b1f46 100%
+    );
+  }
+  66% {
+    border-radius: 10px;
+    background: linear-gradient(
+      295deg,
+      #6efacd 0%,
+      #00afbe 33.33%,
+      #00638f 65.1%,
+      #0b1f46 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      177deg,
+      #6efacd 0%,
+      #00afbe 33.33%,
+      #00638f 65.1%,
+      #0b1f46 85.39%
+    );
+  }
 }
 </Style>
