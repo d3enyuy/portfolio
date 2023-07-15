@@ -1,72 +1,24 @@
 <template>
   <div>
     <div class="container bg-primary">
-      <div class="test full-width"></div>
+      <div class="landing-section full-width row">
+        <div class="text-white caption font-size-64">Hi</div>
+      </div>
     </div>
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    >
-    </example-component>
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    >
-    </example-component>
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    >
-    </example-component>
   </div>
 </template>
 
-<script setup lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-import { ref } from 'vue';
-
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1',
-  },
-  {
-    id: 2,
-    content: 'ct2',
-  },
-  {
-    id: 3,
-    content: 'ct3',
-  },
-  {
-    id: 4,
-    content: 'ct4',
-  },
-  {
-    id: 5,
-    content: 'ct5',
-  },
-]);
-const meta = ref<Meta>({
-  totalCount: 1200,
-});
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss">
 .container {
   background: black;
-  z-index: -1;
+  z-index: -9;
   height: calc(100vh - #{$header-container-height});
 }
-.test {
-  z-index: 1;
+.landing-section {
+  padding: 0 200px;
+  z-index: -1;
   height: 100%;
   background: url(../assets/f.svg);
 
@@ -76,6 +28,10 @@ const meta = ref<Meta>({
   transition: gradient rotate(380deg);
 }
 
+.caption {
+  z-index: 1;
+  font-size: 64px;
+}
 .test:hover {
   animation-play-state: paused;
 }

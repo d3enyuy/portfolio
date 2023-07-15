@@ -12,7 +12,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> LD </q-toolbar-title>
+        <q-toolbar-title> Lambiv </q-toolbar-title>
 
         <div class="headings">
           <q-tabs
