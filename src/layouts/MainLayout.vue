@@ -35,7 +35,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer elevated overlay bordered v-model="leftDrawerOpen" class="drawer">
+    <q-drawer v-model="leftDrawerOpen" class="drawer">
       <q-list>
         <q-item-label header> Essential Links </q-item-label>
 
@@ -70,7 +70,7 @@ const essentialLinks: EssentialLinkProps[] = [
   },
   {
     title: 'Github',
-    caption: 'github.com/quasarframework',
+    caption: 'github.com',
     icon: 'code',
     link: 'https://github.com/quasarframework',
   },
@@ -95,7 +95,9 @@ function toggleLeftDrawer() {
 }
 .q-drawer {
   border-radius: 8px;
-  height: 500px;
+  height: 300px;
+
+  margin: 20px;
 }
 
 .headings {
