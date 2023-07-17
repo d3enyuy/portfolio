@@ -85,6 +85,10 @@ function toggleLeftDrawer() {
 <Style lang="scss" scoped>
 .header {
   padding: 0px 200px;
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+    justify-content: space-between;
+  }
 }
 .page-container {
   overflow: hidden;
