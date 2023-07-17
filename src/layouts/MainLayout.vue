@@ -12,10 +12,11 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Lambiv </q-toolbar-title>
+        <q-toolbar-title v-if="!$q.screen.lt.sm"> Lambiv </q-toolbar-title>
 
         <div class="headings">
           <q-tabs
+            v-if="!$q.screen.lt.sm"
             no-caps
             active-color="primary"
             indicator-color="transparent"

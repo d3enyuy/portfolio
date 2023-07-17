@@ -8,10 +8,11 @@
         <div class="column">
           <span class="greeting">Hi I'm</span>
           <span class="name">Lambiv Dzenyuy</span>
-          <span
-            >A full stack web <br />
-            developer</span
-          >
+
+          <span class="title q-pl-md">
+            A full stack web <br />
+            developer
+          </span>
         </div>
         <div>fskajd</div>
       </div>
@@ -64,6 +65,9 @@
   font-weight: 900;
   line-height: normal;
   letter-spacing: 0.32px;
+}
+.title {
+  border-left: 2px solid white;
 }
 
 @keyframes left-to-right {
