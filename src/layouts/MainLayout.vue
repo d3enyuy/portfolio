@@ -29,9 +29,14 @@
             <q-tab name="contact-me" label="Contact Me" />
           </q-tabs>
         </div>
-        <q-btn flat class="btn-hire-me justify-start text-white text-no-wrap"
-          >Hire me</q-btn
+        <transition
+          enter-active-class="animated fadeIn"
+          leave-active-class="animated fadeOut"
         >
+          <q-btn flat class="justify-start text-white btn-hire-me text-no-wrap"
+            >Hire me</q-btn
+          >
+        </transition>
       </q-toolbar>
     </q-header>
 

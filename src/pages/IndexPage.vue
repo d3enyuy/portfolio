@@ -10,8 +10,9 @@
           <span class="name">Lambiv Dzenyuy</span>
 
           <span class="title q-pl-md">
-            A full stack web <br />
-            developer
+            A fullstack<br />
+            web developer and <br />
+            I work remotely
           </span>
         </div>
         <div>fskajd</div>
@@ -28,6 +29,10 @@
   padding: 100px 200px;
   height: calc(100vh - #{$header-container-height});
   display: grid;
+
+  @media screen and (max-width: 500px) {
+    padding: 10px;
+  }
 }
 .landing-section {
   height: 100%;
@@ -68,6 +73,7 @@
 }
 .title {
   border-left: 2px solid white;
+  font-size: 34px;
 }
 
 @keyframes left-to-right {
