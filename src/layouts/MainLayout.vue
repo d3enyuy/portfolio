@@ -23,9 +23,9 @@
           >
             <q-tab name="images" label="Home" />
             <q-tab name="videos" label="About Me" />
-            <q-tab name="articles" label="Skills" />
-            <q-tab name="articles" label="Projects" />
-            <q-tab name="articles" label="Contact Me" />
+            <q-tab name="skills" label="Skills" />
+            <q-tab name="projects" label="Projects" />
+            <q-tab name="contact-me" label="Contact Me" />
           </q-tabs>
         </div>
         <q-btn flat class="btn-hire-me justify-start text-white text-no-wrap"
@@ -126,7 +126,7 @@ function toggleLeftDrawer() {
     background-size: 200%;
   }
   100% {
-    background-position: bottom center;
+    background-position: right center;
     background-size: 300%;
   }
 }
