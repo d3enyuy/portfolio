@@ -13,6 +13,17 @@
           <span class="name h1">I'm Lambiv Gills</span>
 
           <span class="text-h2 text-white"> A fullstack Developer<br /> </span>
+          <div class="q-pa-md">
+            <q-btn
+              to="/start/pick-quasar-flavour"
+              label="contact me"
+              class="text-white"
+              outline
+              rounded
+              :icon-right="mdiMessage"
+              color="green"
+            />
+          </div>
         </div>
         <div>
           <q-img
@@ -27,7 +38,9 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { mdiMessage } from '@quasar/extras/mdi-v6';
+</script>
 
 <style lang="scss">
 .container {
