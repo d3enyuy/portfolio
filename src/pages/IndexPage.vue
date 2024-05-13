@@ -7,15 +7,16 @@
       >
         <div class="column">
           <span class="greeting">Hi I'm</span>
-          <span class="name">Lambiv Dzenyuy</span>
+          <span class="name">Lambiv Gills Dzenyuy</span>
 
           <span class="title q-pl-md">
             A fullstack<br />
             web developer and <br />
-            I work remotely
           </span>
         </div>
-        <div>fskajd</div>
+        <div>
+          <img :src="require('@/assets/gils.jpg')" alt="Gils" />
+        </div>
       </div>
     </div>
   </div>
