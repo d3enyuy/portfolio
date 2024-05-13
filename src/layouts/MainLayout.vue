@@ -1,7 +1,9 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-header bordered class="bg-white header text-primary">
-      <q-toolbar>
+      <q-toolbar
+        class="full-width row wrap justify-evenly items-center content-center"
+      >
         <q-btn
           v-if="$q.screen.lt.sm"
           flat
@@ -58,8 +60,8 @@
       </q-list>
     </q-drawer>
 
-    <q-page-container class="page-container overflow-hidden">
-      <q-page class="column o">
+    <q-page-container class="overflow-hidden">
+      <q-page>
         <router-view />
       </q-page>
     </q-page-container>
@@ -101,9 +103,7 @@ function toggleLeftDrawer() {
     justify-content: space-between;
   }
 }
-.page-container {
-  overflow: hidden;
-}
+
 .q-drawer {
   border-radius: 8px;
   height: 300px;
