@@ -28,8 +28,7 @@
         <div>
           <q-img
             src="src/assets/gil_no_bg.png"
-            height="400px"
-            width="200px"
+            :width="`${$q.screen.md ? '300px' : '400px'}`"
             alt="Gils"
           />
         </div>
