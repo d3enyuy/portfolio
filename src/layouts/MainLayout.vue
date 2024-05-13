@@ -12,9 +12,11 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title v-if="!$q.screen.lt.sm"> Lambiv </q-toolbar-title>
+        <q-toolbar-title v-if="!$q.screen.lt.sm" class="text-primary">
+          Lambiv Gills</q-toolbar-title
+        >
 
-        <div class="headings">
+        <div class="row">
           <q-tabs
             v-if="!$q.screen.lt.sm"
             no-caps
@@ -28,15 +30,19 @@
             <q-tab name="projects" label="Projects" />
             <q-tab name="contact-me" label="Contact Me" />
           </q-tabs>
-        </div>
-        <transition
-          enter-active-class="animated fadeIn"
-          leave-active-class="animated fadeOut"
-        >
-          <q-btn flat class="justify-start text-white btn-hire-me text-no-wrap"
-            >Hire me</q-btn
+          <transition
+            enter-active-class="animated fadeIn"
+            leave-active-class="animated fadeOut"
           >
-        </transition>
+            <q-btn
+              flat
+              size="sm"
+              rounded
+              class="justify-start text-white btn-hire-me q-ma-sm text-no-wrap"
+              >Hire me</q-btn
+            >
+          </transition>
+        </div>
       </q-toolbar>
     </q-header>
 
@@ -110,8 +116,6 @@ function toggleLeftDrawer() {
 }
 
 .btn-hire-me {
-  border-radius: 10px;
-
   background: linear-gradient(
     199deg,
     #0b1f46 0%,

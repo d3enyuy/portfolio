@@ -3,26 +3,44 @@
     <div class="container bg-primary">
       <div class="landing-section full-width row"></div>
       <div
-        class="row landing-section-container text-white font-size-64 justify-between"
+        class="landing-section-container full-width row wrap justify-evenly items-center content-center font-size-64"
       >
         <div class="column">
-          <span class="greeting">Hi I'm</span>
-          <span class="name">Lambiv Gills Dzenyuy</span>
+          <span
+            class="text-weight-medium text-white text-uppercase text-size-40"
+            >Hello there, welcome to my site</span
+          >
+          <span class="name h1">I'm Lambiv Gills</span>
 
-          <span class="title q-pl-md">
-            A fullstack<br />
-            web developer and <br />
-          </span>
+          <span class="text-h2 text-white"> A fullstack Developer<br /> </span>
+          <div class="q-pa-md">
+            <q-btn
+              to="/start/pick-quasar-flavour"
+              label="contact me"
+              class="text-white"
+              outline
+              rounded
+              :icon-right="mdiMessage"
+              color="green"
+            />
+          </div>
         </div>
         <div>
-          <img :src="require('@/assets/gils.jpg')" alt="Gils" />
+          <q-img
+            src="src/assets/gil_no_bg.png"
+            height="400px"
+            width="200px"
+            alt="Gils"
+          />
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { mdiMessage } from '@quasar/extras/mdi-v6';
+</script>
 
 <style lang="scss">
 .container {
@@ -49,20 +67,6 @@
   grid-area: 1 / 1;
 }
 
-.landing-section-container {
-  font-size: 64px;
-}
-
-.greeting,
-.name {
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-}
-
-.greeting {
-  font-family: Roboto;
-}
 .name {
   color: rgba(72, 216, 120, 0.952);
   font-family: Inter;
@@ -71,10 +75,6 @@
   font-weight: 900;
   line-height: normal;
   letter-spacing: 0.32px;
-}
-.title {
-  border-left: 2px solid white;
-  font-size: 34px;
 }
 
 @keyframes left-to-right {
