@@ -27,7 +27,7 @@
         </div>
         <div>
           <q-img
-            src="src/assets/gil_no_bg.png"
+            src="https://storage.portfolio.dzenyuy.dev/gil_no_bg.png"
             :width="`${$q.screen.md ? '300px' : '400px'}`"
             alt="Gils"
           />
