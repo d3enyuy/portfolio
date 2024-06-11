@@ -15,8 +15,8 @@
         />
 
         <q-toolbar-title v-if="!$q.screen.lt.sm" class="text-primary">
-          Lambiv Gills</q-toolbar-title
-        >
+          Lambiv Gills
+        </q-toolbar-title>
 
         <div class="row">
           <q-tabs
@@ -95,7 +95,8 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
-<Style lang="scss" scoped>
+
+<style lang="scss" scoped>
 .header {
   padding: 0px 200px;
   @media screen and (max-width: 500px) {
@@ -107,7 +108,6 @@ function toggleLeftDrawer() {
 .q-drawer {
   border-radius: 8px;
   height: 300px;
-
   margin: 20px;
 }
 
@@ -146,4 +146,4 @@ function toggleLeftDrawer() {
     background-size: 300%;
   }
 }
-</Style>
+</style>
