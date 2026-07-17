@@ -7,7 +7,6 @@ import { Suspense } from "react"
 import { ThemeProvider } from "@/components/theme-provider"
 import { StructuredData } from "@/components/structured-data"
 import { Navigation } from "@/components/navigation"
-import { SocialLinks } from "@/components/social-links"
 
 const ICON_VERSION = "20260310-2"
 
@@ -93,8 +92,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   colorScheme: "dark light",
   themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#059669" },
-    { media: "(prefers-color-scheme: dark)", color: "#64ffda" }
+    { media: "(prefers-color-scheme: light)", color: "#fcfcfa" },
+    { media: "(prefers-color-scheme: dark)", color: "#121412" }
   ],
 }
 
@@ -126,7 +125,6 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <StructuredData />
             <Navigation />
-            <SocialLinks />
             {children}
           </Suspense>
         </ThemeProvider>

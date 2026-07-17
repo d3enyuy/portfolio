@@ -4,6 +4,7 @@ export type FeaturedProject = {
   kind: "Professional work" | "Side project"
   status: string
   liveUrl?: string
+  repoUrl?: string
   summary: string
   problem: string
   approach: string
@@ -12,6 +13,23 @@ export type FeaturedProject = {
 }
 
 export const featuredProjects: FeaturedProject[] = [
+  {
+    slug: "bunkercoin-shortwave-blockchain",
+    title: "BunkerCoin — a blockchain over shortwave radio",
+    kind: "Professional work",
+    status: "Open source",
+    liveUrl: "https://bunkercoin.com",
+    repoUrl: "https://github.com/TheBunkerCoin/bunker_coin",
+    summary:
+      "Core contributor to an open-source blockchain protocol that runs Alpenglow consensus over HF shortwave radio — from the Rust consensus node to the public API layer and the node infrastructure behind it.",
+    problem:
+      "Blockchains assume fast, reliable internet. Shortwave radio gives you 50–2400 bps, heavy packet loss, and ~300-byte packets — and consensus, block propagation, and a public explorer API all have to survive that.",
+    approach:
+      "Harden the Rust node against real radio conditions instead of simulated ones, build the RPC and API layer that exposes blocks, transactions, and live radio stats, and stand up the secured bastion-and-API infrastructure that connects live radio nodes to the public internet.",
+    detail:
+      "Top contributor to the core repo. The best bugs only appeared on real PACTOR modem hardware: corrupted radio frames triggering absurd allocations, restarts that silently wiped the chain, and a modem that froze without erroring — fixed with decode limits, deterministic padding, restart-safe finalization, and a link watchdog that self-heals the connection.",
+    stack: ["Rust", "Alpenglow consensus", "PACTOR / HF radio", "Erasure coding", "Bun + TypeScript APIs", "Caddy + Tailscale"],
+  },
   {
     slug: "nda-protected-media-and-analytics-platform",
     title: "NDA-protected media and analytics platform",
@@ -73,6 +91,22 @@ export const featuredProjects: FeaturedProject[] = [
       "Aluung is where product thinking matters most for me: practical software for people who need clarity more than complexity.",
     stack: ["Product design", "Full-stack development", "Payments exploration", "Community-centered UX"],
   },
+  {
+    slug: "school-timetable-management",
+    title: "School timetable management",
+    kind: "Side project",
+    status: "Live",
+    liveUrl: "https://app.teacher-timetables.work",
+    summary:
+      "A timetable system for schools that auto-generates conflict-free schedules with an in-browser constraint solver, then lets staff refine the result with drag-and-drop and export PDFs.",
+    problem:
+      "Building a school timetable by hand means juggling teacher availability, double periods, subject pairings, daily maxima, and avoid-days — and most schools still do it in spreadsheets.",
+    approach:
+      "Run the solver in the browser inside a Web Worker: MRV-ordered construction followed by time-budgeted simulated annealing over feasibility-preserving moves. The server, on the Cloudflare Workers free plan, only serves solver input and re-validates every hard constraint before persisting — the client is never trusted.",
+    detail:
+      "Results are seeded and reproducible, with live progress and cancel in the UI. When a lesson cannot be placed, it reports the specific constraint that blocked it instead of failing silently. Solver modules are pure TypeScript and fully unit-tested.",
+    stack: ["Next.js", "TypeScript", "Cloudflare Workers", "Cloudflare D1", "Constraint solving", "Simulated annealing"],
+  },
 ]
 
 export type ExperienceItem = {
@@ -93,13 +127,14 @@ export const experienceItems: ExperienceItem[] = [
     period: "Aug 2023 - Present",
     location: "Remote - Germany",
     summary:
-      "Engineering work across custom DRM, real-time video, analytics infrastructure, and applied machine learning for media and compliance workflows.",
+      "Engineering work across custom DRM, real-time video, analytics infrastructure, applied machine learning, and an open-source blockchain protocol that runs over shortwave radio.",
     highlights: [
+      "Top contributor to BunkerCoin, an open-source Rust blockchain running Alpenglow consensus over shortwave radio — hardened the consensus node against real PACTOR modem hardware and built its public API layer and node infrastructure.",
       "Helped build a custom digital rights management system from scratch rather than relying on standard packaged DRM solutions.",
       "Implemented latency-critical real-time video services where system responsiveness was a product requirement, not an optimization afterthought.",
       "Built major parts of a Kafka- and Apache Druid-based analytics microservice and applied machine learning methods to automate content compliance screening.",
     ],
-    stack: ["Apache Kafka", "Apache Druid", "Custom DRM", "Real-time video", "Applied ML", "Laravel", "Svelte", "Neo4j", "Meilisearch", "Redis", "Soketi", "Docker", "Coolify", "Cloudflare Realtimekit"],
+    stack: ["Rust", "Apache Kafka", "Apache Druid", "Custom DRM", "Real-time video", "Applied ML", "Laravel", "Svelte", "Neo4j", "Meilisearch", "Redis", "Soketi", "Docker", "Coolify", "Cloudflare Realtimekit"],
     featured: true,
   },
   {
@@ -170,6 +205,9 @@ export const focusAreas = [
 ]
 
 export const coreStack = [
+  "Rust",
+  "TypeScript",
+  "Node.js",
   "Custom DRM",
   "Apache Druid",
   "Kafka",
@@ -178,16 +216,22 @@ export const coreStack = [
   "Payment integration",
   "Laravel",
   "Svelte",
+  "Next.js",
   "PostgreSQL",
-  "Node.js",
   "Neo4j",
   "Meilisearch",
   "Redis",
   "Soketi",
   "Docker",
+  "Cloudflare Workers",
 ]
 
 export const nowItems = [
+  {
+    title: "Running a blockchain over real radio hardware",
+    description:
+      "I am taking BunkerCoin from simulation to physical PACTOR shortwave modems — the class of bug that only shows up on real hardware is where most of my attention goes right now.",
+  },
   {
     title: "Turning private work into public case studies",
     description:
@@ -211,6 +255,8 @@ export const nowItems = [
 ]
 
 export const upcomingNotes = [
+  "What breaks when your blockchain's network layer is a shortwave radio modem.",
+  "Running a constraint solver in the browser so the server can stay on a free plan.",
   "What changes when you build DRM and streaming infrastructure instead of outsourcing it.",
   "Designing analytics services that stay understandable under Kafka- and Druid-heavy workloads.",
   "Building lead-enrichment and outreach workflows without turning operations into a black box.",
@@ -219,6 +265,7 @@ export const upcomingNotes = [
 ]
 
 export const researchInterests = [
+  "Consensus and peer-to-peer networking under extreme bandwidth constraints.",
   "Distributed media systems and rights enforcement.",
   "Event-driven systems and integration reliability.",
   "Applied machine learning for compliance and workflow automation.",

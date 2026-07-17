@@ -140,34 +140,32 @@ export function Navigation() {
 
   const navLinkClassName = (isActive: boolean) =>
     cn(
-      "rounded-md px-3 py-2 text-sm font-medium transition-colors",
-      isActive ? "bg-primary/10 text-primary" : "text-muted-foreground hover:text-foreground",
+      "px-2 py-2 text-sm transition-colors",
+      isActive ? "text-foreground underline decoration-border underline-offset-4" : "text-muted-foreground hover:text-foreground",
     )
 
   const mobileLinkClassName = (isActive: boolean) =>
     cn(
-      "block w-full rounded-xl px-4 py-3 text-base font-medium transition-colors",
-      isActive
-        ? "bg-primary/10 text-primary"
-        : "text-foreground hover:bg-muted/70 hover:text-foreground",
+      "block w-full px-4 py-3 text-base transition-colors",
+      isActive ? "text-foreground" : "text-muted-foreground hover:text-foreground",
     )
 
   return (
     <nav
       ref={navRef}
-      className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/95 backdrop-blur-sm"
+      className="fixed left-0 right-0 top-0 z-50 border-b border-border bg-background/90 backdrop-blur-sm"
     >
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:px-12 lg:px-24">
+      <div className="mx-auto flex max-w-2xl items-center justify-between px-6 py-3">
         <a
           href={isHome ? "#top" : "/"}
           onClick={handleBrandClick}
-          className="text-primary transition-colors hover:text-primary/80"
+          className="text-foreground transition-colors hover:text-primary"
           aria-label="Go to home"
         >
-          <BrandMark className="h-9 w-9" />
+          <BrandMark className="h-6 w-6" />
         </a>
 
-        <div className="hidden items-center gap-2 lg:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           {sectionItems.map(({ id, label }) =>
             isHome ? (
               <a
@@ -225,7 +223,7 @@ export function Navigation() {
 
           <div
             id="mobile-navigation"
-            className="fixed inset-x-4 z-50 overflow-hidden rounded-2xl border border-border bg-background shadow-2xl lg:hidden"
+            className="fixed inset-x-4 z-50 overflow-hidden rounded-md border border-border bg-background lg:hidden"
             style={{
               top: mobileMenuTop + 8,
               maxHeight: `calc(100dvh - ${mobileMenuTop + 16}px)`,

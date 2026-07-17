@@ -1,18 +1,13 @@
 type SectionHeadingProps = {
-  number: string
   title: string
   description?: string
 }
 
-export function SectionHeading({ number, title, description }: SectionHeadingProps) {
+export function SectionHeading({ title, description }: SectionHeadingProps) {
   return (
-    <div className="mb-12">
-      <h2 className="mb-4 flex items-center gap-4 text-3xl font-bold text-foreground">
-        <span className="font-mono text-xl text-primary">{number}.</span>
-        {title}
-        <span className="h-px flex-1 bg-border" />
-      </h2>
-      {description ? <p className="max-w-3xl text-base leading-relaxed text-muted-foreground">{description}</p> : null}
+    <div className="mb-10">
+      <h2 className="font-mono text-sm text-muted-foreground">{title}</h2>
+      {description ? <p className="mt-3 text-base leading-relaxed text-muted-foreground">{description}</p> : null}
     </div>
   )
 }
