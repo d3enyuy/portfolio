@@ -3,92 +3,84 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Custom portfolio color scheme inspired by Brittany Chiang */
+/* Minimal, near-monochrome palette. One quiet green carries the brand. */
 
 /* Light Mode */
 :root {
-  --navy: #ffffff;
-  --light-navy: #f8fafc;
-  --lightest-navy: #e2e8f0;
-  --navy-shadow: rgba(0, 0, 0, 0.1);
-  --dark-slate: #64748b;
-  --slate: #475569;
-  --light-slate: #334155;
-  --lightest-slate: #1e293b;
-  --white: #ffffff;
-  --green: #059669;
-  --green-tint: rgba(5, 150, 105, 0.1);
+  --paper: #fcfcfa;
+  --paper-raised: #f4f4f1;
+  --hairline: #e7e7e2;
+  --ink: #1c1c1a;
+  --ink-muted: #6f6f68;
+  --green: #0e6e51;
+  --green-tint: rgba(14, 110, 81, 0.08);
 
-  --background: var(--navy);
-  --foreground: var(--lightest-slate);
-  --card: var(--light-navy);
-  --card-foreground: var(--lightest-slate);
-  --popover: var(--light-navy);
-  --popover-foreground: var(--lightest-slate);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper-raised);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
   --primary: var(--green);
-  --primary-foreground: var(--white);
-  --secondary: var(--lightest-navy);
-  --secondary-foreground: var(--light-slate);
-  --muted: var(--lightest-navy);
-  --muted-foreground: var(--dark-slate);
+  --primary-foreground: #ffffff;
+  --secondary: var(--paper-raised);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-raised);
+  --muted-foreground: var(--ink-muted);
   --accent: var(--green);
-  --accent-foreground: var(--white);
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: var(--lightest-navy);
-  --input: var(--lightest-navy);
+  --border: var(--hairline);
+  --input: var(--hairline);
   --ring: var(--green);
-  --radius: 0.5rem;
-  --sidebar: var(--navy);
-  --sidebar-foreground: var(--lightest-slate);
+  --radius: 0.25rem;
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--green);
-  --sidebar-primary-foreground: var(--white);
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: var(--green);
-  --sidebar-accent-foreground: var(--white);
-  --sidebar-border: var(--lightest-navy);
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: var(--hairline);
   --sidebar-ring: var(--green);
 }
 
 .dark {
-  --navy: #0a192f;
-  --light-navy: #112240;
-  --lightest-navy: #233554;
-  --navy-shadow: rgba(2, 12, 27, 0.7);
-  --dark-slate: #495670;
-  --slate: #8892b0;
-  --light-slate: #a8b2d1;
-  --lightest-slate: #ccd6f6;
-  --white: #e6f1ff;
-  --green: #64ffda;
-  --green-tint: rgba(100, 255, 218, 0.1);
+  --paper: #121412;
+  --paper-raised: #1a1d1a;
+  --hairline: #282c28;
+  --ink: #e3e5e0;
+  --ink-muted: #8f948c;
+  --green: #8fd1b5;
+  --green-tint: rgba(143, 209, 181, 0.08);
 
-  --background: var(--navy);
-  --foreground: var(--lightest-slate);
-  --card: var(--light-navy);
-  --card-foreground: var(--lightest-slate);
-  --popover: var(--light-navy);
-  --popover-foreground: var(--lightest-slate);
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper-raised);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
   --primary: var(--green);
-  --primary-foreground: var(--navy);
-  --secondary: var(--lightest-navy);
-  --secondary-foreground: var(--lightest-slate);
-  --muted: var(--lightest-navy);
-  --muted-foreground: var(--slate);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-raised);
+  --secondary-foreground: var(--ink);
+  --muted: var(--paper-raised);
+  --muted-foreground: var(--ink-muted);
   --accent: var(--green);
-  --accent-foreground: var(--navy);
+  --accent-foreground: var(--paper);
   --destructive: oklch(0.396 0.141 25.723);
   --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: var(--lightest-navy);
-  --input: var(--lightest-navy);
+  --border: var(--hairline);
+  --input: var(--hairline);
   --ring: var(--green);
-  --radius: 0.5rem;
-  --sidebar: var(--navy);
-  --sidebar-foreground: var(--lightest-slate);
+  --radius: 0.25rem;
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
   --sidebar-primary: var(--green);
-  --sidebar-primary-foreground: var(--navy);
+  --sidebar-primary-foreground: var(--paper);
   --sidebar-accent: var(--green);
-  --sidebar-accent-foreground: var(--navy);
-  --sidebar-border: var(--lightest-navy);
+  --sidebar-accent-foreground: var(--paper);
+  --sidebar-border: var(--hairline);
   --sidebar-ring: var(--green);
 }
 
@@ -132,66 +124,32 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
   }
 
-  /* Theme transition */
-  * {
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-  }
-
-  /* Custom scrollbar */
-  ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: var(--navy);
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background: var(--dark-slate);
-    border-radius: 6px;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--slate);
-  }
-
-  /* Mobile scrollbar - thinner on mobile */
-  @media (max-width: 768px) {
-    ::-webkit-scrollbar {
-      width: 6px;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
     }
   }
 
-  /* Prevent horizontal scroll on mobile */
   @media (max-width: 768px) {
     body {
       overflow-x: hidden;
     }
-  }
 
-  /* Better tap targets for mobile */
-  @media (max-width: 768px) {
-    a, button {
-      -webkit-tap-highlight-color: rgba(100, 255, 218, 0.1);
-    }
-  }
-
-  /* Smooth font rendering on mobile */
-  @media (max-width: 768px) {
-    body {
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      text-rendering: optimizeLegibility;
+    a,
+    button {
+      -webkit-tap-highlight-color: var(--green-tint);
     }
   }
 }
