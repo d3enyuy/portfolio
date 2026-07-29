@@ -46,6 +46,22 @@ export const featuredProjects: FeaturedProject[] = [
     stack: ["Custom DRM", "Real-time video", "Apache Kafka", "Apache Druid", "Applied ML"],
   },
   {
+    slug: "wondercall-ai-calling-platform",
+    title: "@WonderCall AI calling platform",
+    kind: "Professional work",
+    status: "Production",
+    liveUrl: "https://wondercall.ai",
+    summary:
+      "Product engineering for an AI-powered calling platform that runs voice-driven conversations at scale, with fallback orchestration across calls, email, and WhatsApp.",
+    problem:
+      "Voice AI is easy to demo and hard to operate: real telephony, interrupted audio streams, tool calls mid-conversation, billing, and a plan for what happens when nobody picks up.",
+    approach:
+      "A monorepo platform — Hono API on Cloudflare Workers, Next.js frontend, PostgreSQL, Stripe, ElevenLabs voice — with a fallback-task system that retries unreachable people through other channels without losing the conversation's context.",
+    detail:
+      "My work ran across the API and web app, voice-gateway reliability (guarding async tool handling, finalizing streams on interrupt, dependable approval prompts), the multi-level referral network and rewards system, the Stripe billing migration, and shipping the notarized macOS desktop app.",
+    stack: ["Cloudflare Workers", "Hono", "Next.js", "ElevenLabs", "Stripe", "PostgreSQL / Prisma", "Electron"],
+  },
+  {
     slug: "ai-creator-chatbot-service",
     title: "@Boostx AI-driven creator chatbot service",
     kind: "Professional work",
@@ -130,6 +146,7 @@ export const experienceItems: ExperienceItem[] = [
       "Engineering work across custom DRM, real-time video, analytics infrastructure, applied machine learning, and an open-source blockchain protocol that runs over shortwave radio.",
     highlights: [
       "Top contributor to BunkerCoin, an open-source Rust blockchain running Alpenglow consensus over shortwave radio — hardened the consensus node against real PACTOR modem hardware and built its public API layer and node infrastructure.",
+      "Built major parts of WonderCall, an AI-powered calling platform — API and web app, voice-gateway reliability, a multi-level referral network with rewards, Stripe billing migration, and the notarized macOS desktop app.",
       "Helped build a custom digital rights management system from scratch rather than relying on standard packaged DRM solutions.",
       "Implemented latency-critical real-time video services where system responsiveness was a product requirement, not an optimization afterthought.",
       "Built major parts of a Kafka- and Apache Druid-based analytics microservice and applied machine learning methods to automate content compliance screening.",
